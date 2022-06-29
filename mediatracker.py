@@ -4,11 +4,15 @@ import os
 import json
 import sys
 filename = '/home/' + os.environ["USER"] + '/.local/share/mediatracker/data.json'
-
-if sys.argv[1] == "-h":
+def help():
     print("-a   add media")
     print("-l   list media")
     print("-h   display this help")
+if len(sys.argv) == 1:
+    help()
+    sys.exit(0)
+if sys.argv[1] == "-h":
+    help()
 if sys.argv[1] == "-l":
     print(pd.read_json(filename))
 if sys.argv[1] == "-a":
@@ -18,10 +22,6 @@ if sys.argv[1] == "-a":
         eps = input("how many episode's: ")
         seasons = input("how many seasons: ")
     wat = input("watched yes or no: ")
-# if tv == "yes":
-    # wew = "{"title":"" + title + "","tv":"" + tv + "","eps":"" + eps + "","wat":"" + wat + ""}"
-# else:
-    # wew = "{"title":"" + title + "","tv":"" + tv + "","eps":"" + "0" + "","wat":"" + wat + ""}"
     d = {}
     d['title'] = title
     d['tv'] = tv
