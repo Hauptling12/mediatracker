@@ -1,6 +1,10 @@
 # mediatracker
 sort and track your media
-## installation
+## Getting Started
+### dependences
+* [jtbl](https://github.com/kellyjonbrazil/jtbl)
+* [json-c](https://github.com/json-c/json-c)
+### Installing
 ```
 git clone https://github.com/Hauptling12/mediatracker
 cd mediatracker
