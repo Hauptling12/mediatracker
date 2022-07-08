@@ -31,7 +31,7 @@ int main(int argc, char **argv)
             break;
         case 'a':
             printf("title: ");
-            scanf("%s",name);
+            scanf("%[^\n]%*c",name);
             printf("is it a tv show? y/n: ");
             scanf("%s",tv);
             if (!strcmp(tv, "y")) {
